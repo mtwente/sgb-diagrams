@@ -228,4 +228,11 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/git,linux,macos,node,dotenv,windows,visualstudiocode
+
+# R specific files
 .Rproj.user
+.Rhistory
+
+# Plot output files
+*.pdf
+*.png
