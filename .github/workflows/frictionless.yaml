@@ -9,14 +9,13 @@ on:
       - main
 
 jobs:
-  # Validate
-
   validate:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Validate data
-        uses: frictionlessdata/repository@v2
         with:
-          inquiry: inquiry.yaml
+          lfs: true # add this to download LFS files
+          submodules: true # add this to download submodules
+      - name: Validate data
+        uses: frictionlessdata/frictionless-ci@v2
